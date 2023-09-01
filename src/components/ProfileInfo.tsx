@@ -3,20 +3,15 @@ import { Backpack, Github, Linkedin, Mail, MapPin } from 'lucide-react'
 // import { siteMetadata } from '~/data/siteMetadata'
 // import XIcon from '~/icons/x.svg'
 
-import {AuthorFrontMatter} from "../../types/AuthorFrontMatter";
 import SocialIcon from "@/components/social-icons";
 
-interface Props {
-    frontMatter: AuthorFrontMatter
-}
-
-export function ProfileCardInfo(props:Props) {
+export function ProfileCardInfo({siteMetadata}: any) {
     //let { t } = useTranslation('common')
-    const { name, occupation, company, email, juejin, zhihu, github } = props.frontMatter
+    const { author, occupation, company, email, github } = siteMetadata
 
     return (
         <div className="hidden py-4 xl:block xl:px-6">
-            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{name}</h3>
+            <h3 className="text-xl font-semibold text-gray-800 dark:text-white">{author}</h3>
             <h5 className="py-2 text-gray-700 dark:text-gray-400">{occupation}</h5>
             <div className="mb-2 mt-4 space-y-4">
                 <div className="flex items-center text-gray-700 dark:text-gray-200">

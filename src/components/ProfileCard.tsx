@@ -1,17 +1,13 @@
-import {clsx} from 'clsx'
 import Image from '@/components/Image'
 import React, {useCallback, useEffect, useRef, useState} from 'react'
 import {ProfileCardInfo} from './ProfileInfo'
-import {AuthorFrontMatter} from "../../types/AuthorFrontMatter";
+
 
 //import { SpotifyNowPlaying } from './SpotifyNowPlaying'
-interface Props {
-    frontMatter: AuthorFrontMatter
-}
 
 
-export function ProfileCard(props:Props) {
-    const { avatar} = props.frontMatter
+export function ProfileCard({siteMetadata}: any) {
+    const { avatar} = siteMetadata
     let ref = useRef(null)
     let [style, setStyle] = useState<React.CSSProperties>({})
 
@@ -60,9 +56,8 @@ export function ProfileCard(props:Props) {
         >
             <div
                 style={style}
-                className={
-                    'flex flex-col overflow-hidden transition-all duration-200 ease-out xl:rounded-lg bg-white shadow-demure dark:bg-dark dark:shadow-mondegreen outline outline-1 outline-gray-100 dark:outline-gray-600'
-                }
+                className="flex flex-col overflow-hidden transition-all duration-200 ease-out xl:rounded-lg bg-white shadow-demure dark:bg-dark dark:shadow-mondegreen outline outline-2 outline-gray-200 dark:outline-gray-600"
+
             >
                 <Image
                     src={avatar}
@@ -78,7 +73,7 @@ export function ProfileCard(props:Props) {
                     priority
                 />
                 {/*<SpotifyNowPlaying/>*/}
-                <ProfileCardInfo frontMatter={props.frontMatter}/>
+                <ProfileCardInfo siteMetadata={siteMetadata}/>
                 <span className="h-1.5 bg-gradient-to-r from-green-300 via-blue-500 to-purple-600"></span>
             </div>
         </div>

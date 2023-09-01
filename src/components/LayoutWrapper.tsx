@@ -6,7 +6,8 @@ import SectionContainer from './SectionContainer'
 import Footer from './Footer'
 import MobileNav from './MobileNav'
 import ThemeSwitch from './ThemeSwitch'
-import { ReactNode } from 'react'
+import React, { ReactNode } from 'react'
+import Image from "@/components/Image";
 
 interface Props {
   children: ReactNode
@@ -20,8 +21,21 @@ const LayoutWrapper = ({ children }: Props) => {
           <div>
             <Link href="/" aria-label={siteMetadata.headerTitle}>
               <div className="flex items-center justify-between">
-                <div className="mr-3">
-                  <Logo />
+                <div className="mr-3 avatar-image">
+                  {/*<Logo />*/}
+                  <Image
+                      src={'/static/images/avatar.png'}
+                      alt={'avatar'}
+                      width={75}
+                      height={75}
+                      // style={{
+                      //   objectPosition: '50% 16%',
+                      //   objectFit: 'cover',
+                      //   width: '100%',
+                      //   aspectRatio: '17/11',
+                      // }}
+                      priority
+                  />
                 </div>
                 {typeof siteMetadata.headerTitle === 'string' ? (
                   <div className="hidden h-6 text-2xl font-semibold sm:block">

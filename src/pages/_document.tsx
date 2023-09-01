@@ -25,7 +25,7 @@ class MyDocument extends Document {
           <meta name="referrer" content="no-referrer" />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
         </Head>
-        <body className="bg-white text-black antialiased dark:bg-gray-900 dark:text-white">
+        <body className="bg-white text-black antialiased dark:bg-dark dark:text-white">
           <Main />
           <NextScript />
         </body>
