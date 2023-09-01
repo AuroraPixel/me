@@ -10,6 +10,7 @@ specifiers:
   '@types/node': ^17.0.21
   '@types/react': ^17.0.39
   autoprefixer: ^10.4.0
+  clsx: ^2.0.0
   cross-env: ^7.0.3
   dedent: ^0.7.0
   esbuild: ^0.14.23
@@ -24,6 +25,7 @@ specifiers:
   image-size: 1.0.0
   inquirer: ^8.1.1
   lint-staged: ^11.0.0
+  lucide-react: ^0.274.0
   mdx-bundler: ^8.0.0
   next: ^12.1.0
   next-remote-watch: ^1.0.0
@@ -57,10 +59,12 @@ dependencies:
   '@tailwindcss/forms': 0.4.1_tailwindcss@3.3.3
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.3
   autoprefixer: 10.4.15_postcss@8.4.29
+  clsx: 2.0.0
   esbuild: 0.14.54
   github-slugger: 1.5.0
   gray-matter: 4.0.3
   image-size: 1.0.0
+  lucide-react: 0.274.0_react@17.0.2
   mdx-bundler: 8.1.0_esbuild@0.14.54
   next: 12.3.4_sfoxds7t5ydpegc3knd667wn6m
   next-themes: 0.0.14_dwjfwrt6uv2f53xn6wotzcxyoa
@@ -2670,6 +2674,11 @@ packages:
     engines: {node: '>=0.8'}
     dev: true
 
+  /clsx/2.0.0:
+    resolution: {integrity: sha512-rQ1+kcj+ttHG0MKVGBUXwayCCF1oh39BF5COIpRzuCEv8Mwjv0XucrI2ExNTOn9IlLifGClWQcU9BrZORvtw6Q==}
+    engines: {node: '>=6'}
+    dev: false
+
   /code-point-at/1.1.0:
     resolution: {integrity: sha512-RpAVKQA5T63xEj6/giIbUEtZwJ4UFIc3ZtvEkiaUERylqe8xb5IvqcgOurZLahv93CLKfxcw5YI+DZcUBRyLXA==}
     engines: {node: '>=0.10.0'}
@@ -5183,6 +5192,14 @@ packages:
     engines: {node: '>=10'}
     dependencies:
       yallist: 4.0.0
+
+  /lucide-react/0.274.0_react@17.0.2:
+    resolution: {integrity: sha512-qiWcojRXEwDiSimMX1+arnxha+ROJzZjJaVvCC0rsG6a9pUPjZePXSq7em4ZKMp0NDm1hyzPNkM7UaWC3LU2AA==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0
+    dependencies:
+      react: 17.0.2
+    dev: false
 
   /markdown-extensions/1.1.1:
     resolution: {integrity: sha512-WWC0ZuMzCyDHYCasEGs4IPvLyTGftYwh6wIEOULOF0HXcqZlhwRzrK0w2VUlxWA98xnvb/jszw4ZSkJ6ADpM6Q==}

@@ -3,6 +3,7 @@ import Image from '@/components/Image'
 import { PageSEO } from '@/components/SEO'
 import { ReactNode } from 'react'
 import { AuthorFrontMatter } from 'types/AuthorFrontMatter'
+import {ProfileCard} from "@/components/ProfileCard";
 
 interface Props {
   children: ReactNode
@@ -15,6 +16,7 @@ export default function AuthorLayout({ children, frontMatter }: Props) {
   return (
     <>
       <PageSEO title={`关于 - ${name}`} description={`关于我 - ${name}`} />
+      <ProfileCard frontMatter={frontMatter} />
       <div className="divide-y">
         <div className="space-y-2 pt-6 pb-8 md:space-y-5">
           <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-6xl md:leading-14">
