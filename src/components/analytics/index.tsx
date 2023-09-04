@@ -3,6 +3,7 @@ import Plausible from './Plausible'
 import SimpleAnalytics from './SimpleAnalytics'
 import Umami from './Umami'
 import siteMetadata from '@/data/siteMetadata'
+import { Analytics as VerCelAnalytics } from '@vercel/analytics/react';
 
 declare global {
   interface Window {
@@ -19,6 +20,7 @@ const Analytics = () => {
     <>
       {isProduction && siteMetadata.analytics.simpleAnalytics && <SimpleAnalytics />}
       {isProduction && siteMetadata.analytics.googleAnalyticsId && <GA />}
+      {isProduction && <VerCelAnalytics/>}
     </>
   )
 }
