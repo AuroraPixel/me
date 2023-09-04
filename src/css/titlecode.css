@@ -1,0 +1,19 @@
+.title .first {
+    background: linear-gradient(59deg, #000000, #03e1ff, #1de840, #dc1fff, #03e1ff, #ffffff);
+    background-size: 1000% 1000%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animatedText 6s linear infinite;
+    font-size: 120%;
+}
+
+@keyframes animatedText {
+    0% {
+        background-position: 100% 100%;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}

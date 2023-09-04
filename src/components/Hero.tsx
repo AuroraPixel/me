@@ -12,17 +12,26 @@ export default function Hero({siteMetadata}: any): ReactElement {
     return (
         <div>
             <canvas className="bg-skin-base pointer-events-none absolute inset-0" id="canvas"></canvas>
-            <div className="relative z-10 h-[calc(100vh_-_135px)]">
-                <div ref={ref} className="px-4 text-3xl md:text-4xl mt-12">
-                    <div className={'text-4xl md:text-5xl'}>
-                        {siteMetadata.welcome}
+            <div className=" divide-y divide-gray-200 dark:divide-gray-700">
+                <div ref={ref} className="px-4 space-y-2 md:my-4 md:space-y-5 md:pb-8 md:pt-6 xl:grid xl:grid-cols-3">
+                    <div className={'tmd:pr-8 xl:col-span-2 space-y-6 md:space-y-8'}>
+                        <div className="text-base leading-7 md:text-lg md:leading-8 text-gray-600 dark:text-gray-400">
+                            <div className={'title whitespace-nowrap text-3xl mb-8'}>
+                                <span className={'first text-4xl'}>
+                                    Code
+                                </span>&nbsp;your way
+                                <br/>
+                                <div className={'second ml-[150px]'}>
+                                    to the future.
+                                </div>
+                            </div>
+                            <TypedBios/>
+                        </div>
+
                     </div>
-                    <div className={'mt-10'}>
-                        <TypedBios/>
+                    <div className={'hidden xl:block h-[20px]'}>
+                        <ProfileCard siteMetadata={siteMetadata}/>
                     </div>
-                </div>
-                <div className={'hidden py-4 xl:block  w-1/3 mt-32 ml-auto'}>
-                    <ProfileCard siteMetadata={siteMetadata}/>
                 </div>
             </div>
         </div>
