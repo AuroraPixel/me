@@ -1,6 +1,6 @@
 ---
 name: AuroraPixel
-avatar: /static/images/avatar.png
+avatar: /static/images/favicon.png
 occupation: 后端工程师
 company: 励志成为全栈工程师，记录前后端学习成长历程。
 email: wanghanlinlin@126.com

@@ -7,9 +7,9 @@ const siteMetadata = {
     theme: 'system', // system, dark or light
     siteUrl: 'https://maqib.cn',
     siteRepo: 'https://github.com/AuroraPixel',
-    siteLogo: '/static/images/avatar.png',
+    siteLogo: '/static/images/favicon.png',
     socialBanner: '/static/images/twitter-card.png',
-    avatar: '/static/images/avatar.png',
+    avatar: '/static/images/favicon.png',
     occupation: '后端工程师',
     company: '励志成为全栈工程师，记录前后端学习成长历程。',
     email: 'wanghanlinlin@126.com',
@@ -80,7 +80,7 @@ const siteMetadata = {
 
 const Card = {
     name: 'AuroraPixel',
-    avatar: '/static/images/avatar.png',
+    avatar: '/static/images/favicon.png',
     occupation: '后端工程师',
     company: '励志成为全栈工程师，记录前后端学习成长历程。',
     email: 'wanghanlinlin@126.com',

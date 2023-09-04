@@ -19,6 +19,7 @@ module.exports = {
       boxShadow: {
         mondegreen:
             '5px 5px rgba(0, 98, 90, 0.4), 10px 10px rgba(0, 98, 90, 0.3), 15px 15px rgba(0, 98, 90, 0.2), 20px 20px rgba(0, 98, 90, 0.1), 25px 25px rgba(0, 98, 90, 0.05)',
+        demure: 'rgba(0, 0, 0, 0.3) 0 35px 60px -15px',
       },
       fontFamily: {
         sans: ['InterVariable', ...defaultTheme.fontFamily.sans],

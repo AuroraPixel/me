@@ -60,7 +60,7 @@ export function ProfileCard({siteMetadata}: any) {
 
             >
                 <Image
-                    src={avatar}
+                    src={'/static/images/me.jpeg'}
                     alt={'avatar'}
                     width={550}
                     height={350}

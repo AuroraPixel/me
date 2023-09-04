@@ -26,8 +26,8 @@ const LayoutWrapper = ({ children }: Props) => {
                   <Image
                       src={'/static/images/avatar.png'}
                       alt={'avatar'}
-                      width={75}
-                      height={75}
+                      width={55}
+                      height={55}
                       // style={{
                       //   objectPosition: '50% 16%',
                       //   objectFit: 'cover',
