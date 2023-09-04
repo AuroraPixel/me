@@ -8,7 +8,7 @@ const siteMetadata = {
     siteUrl: 'https://maqib.cn',
     siteRepo: 'https://github.com/AuroraPixel',
     siteLogo: '/static/images/favicon.png',
-    socialBanner: '/static/images/twitter-card.png',
+    socialBanner: '/static/images/favicon.png',
     avatar: '/static/images/favicon.png',
     occupation: '后端工程师',
     company: '励志成为全栈工程师，记录前后端学习成长历程。',
