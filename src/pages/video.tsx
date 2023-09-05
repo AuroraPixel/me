@@ -11,7 +11,6 @@ export const getStaticProps: GetStaticProps<{ videos: VItem[] }> = async () => {
   } catch (e){
     console.log("error:",e)
   }
-  console.log("aaaaaaa",videos)
   return { props: { videos: JSON.parse(JSON.stringify(videos)) } }
 }
 

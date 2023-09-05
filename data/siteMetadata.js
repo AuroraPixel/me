@@ -5,7 +5,7 @@ const siteMetadata = {
     description: '分享 前后端 热门技术，记录前端工程师学习成长历程。',
     language: 'en-us',
     theme: 'system', // system, dark or light
-    siteUrl: 'https://maqib.cn',
+    siteUrl: 'https://www.auroralpixel.world/',
     siteRepo: 'https://github.com/AuroraPixel',
     siteLogo: '/static/images/favicon.png',
     socialBanner: '/static/images/favicon.png',
