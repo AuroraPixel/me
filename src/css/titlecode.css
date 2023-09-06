@@ -16,3 +16,15 @@
         background-position: 0 0;
     }
 }
+
+.li3 {
+    color: #a353f1;
+    font-size: initial;
+    background: initial;
+}
+
+.li3-warning{
+    color: red;
+    font-size: initial;
+    background: initial;
+}
