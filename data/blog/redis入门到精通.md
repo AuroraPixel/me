@@ -203,6 +203,45 @@ String类型是二进制安全的。几乎可以存储所有数据类型，比�
 (integer) 948
 
 ```
+<code class='li3'>mset key value [key value ...] </code> :批量设置key value
+
+<code class='li3'>msetnx key value [key value ...] </code> :批量设置key value，<code class='li3-warning'>有一个key存在全部失效</code>
+
+<code class='li3'>mget key [key ...] </code> :批量获取key
+
+<code class='li3'>getrange key start end </code> :获取key的从start 到end的值。 <code class='li3-warning'>也可使用负数：1 表示最后一个字符，-2 表示倒数第二个字符，依此类推。</code>
+```c
+redis> SET mykey "This is a string"
+"OK"
+redis> GETRANGE mykey 0 3
+"This"
+redis> GETRANGE mykey -3 -1
+"ing"
+redis> GETRANGE mykey 0 -1
+"This is a string"
+redis> GETRANGE mykey 10 100
+"string"
+redis> 
+
+```
+
+<code class='li3'>setrange key offset value </code> :从key的value第offset开始设置value
+```c
+redis> SET key1 "Hello World"
+"OK"
+redis> SETRANGE key1 6 "Redis"
+(integer) 11
+redis> GET key1
+"Hello Redis"
+redis> 
+
+
+redis> SETRANGE key2 6 "Redis"
+(integer) 11
+redis> GET key2
+"Redis"
+redis> 
+```
 
 ## 最后
 
