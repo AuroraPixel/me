@@ -243,6 +243,17 @@ redis> GET key2
 redis> 
 ```
 
+### list(列表):
+底层原理是一个双端列表的结构，容量是(2^32)-1个元素，大概40多亿，主要功能 push/pop等，使用场景在栈、队列、消息队列等。
+
+![list原理图](/static/images/redis/list.png)
+
+<code class='li3'>lpush key element [element ...]</code> : 从key的列表左边添加元素element
+
+<code class='li3'>rpush key element [element ...]</code> : 从key的列表右边添加元素element
+
+<code class='li3'>lrange key start stop</code> : 从左start开始到右end遍历list
+
 ## 最后
 
 接下来我将计划用Go仿写一个Redis数据库，敬请期待!。
