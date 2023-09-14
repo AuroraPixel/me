@@ -254,6 +254,49 @@ redis>
 
 <code class='li3'>lrange key start stop</code> : 从左start开始到右end遍历list
 
+<code class='li3'>lpop key [count] stop</code> : 从左取出[count]，默认是1个元素
+
+<code class='li3'>rpop key [count] stop</code> : 从右取出[count]，默认是1个元素
+
+<code class='li3'>lindex key index </code> : 查看key中第index个元素
+
+<code class='li3'>llen key </code> : 查看key中元素的个数
+
+<code class='li3'>lrem key count element </code> : 删除key中count个element元素
+
+<code class='li3'>ltrim key start end </code> : 截取key中start到end的元素，其余舍弃
+
+```c
+> lrange list 0 -1
+1) "4"
+2) "3"
+3) "2"
+4) "1"
+5) "1"
+6) "1"
+
+> ltrim list 1 3
+"OK"
+
+> lrange list 0 -1
+1) "3"
+2) "2"
+3) "1"
+
+```
+
+<code class='li3'>rpoplpush key key1  </code> : 组合命令，从key右取一个元素，左塞入key1
+
+<code class='li3'>lset key index element  </code> : 将key的第index元素改编为element <code class='li3-warning'>注意：</code>索引不存在会报索引越界
+
+<code class='li3'>linsert key [before|after] pivot element  </code> : 在key的已有元素pivot的前(后)塞入element
+- 0:key不存在
+- -1:pivot在list中不存在
+
+使用场景：论坛中某人订阅不同消息，可以将消息的id存入redis的list中。
+
+### hash:
+
 ## 最后
 
 接下来我将计划用Go仿写一个Redis数据库，敬请期待!。
