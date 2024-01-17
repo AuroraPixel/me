@@ -1,9 +1,9 @@
 const projectsData = [
   {
-    title: 'go-admin',
-    description: `[建造中] 这是一个go+react的企业级后台管理系统`,
-    imgSrc: '/static/images/construccion.jpg',
-    href: '#',
+    title: 'MagicRepokit',
+    description: `这是一个springcloud与react开发的AIGC应用平台。`,
+    imgSrc: '/static/images/projects/mrk.png',
+    href: 'https://mrk.auroralpixel.world/auth',
   },
 ]
 
